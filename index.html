@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web Development Portfolio</title>
-    <link rel="stylesheet" href="5thstyle.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -22,17 +22,17 @@
                 <p>I have an undergraduate degree in <strong>business</strong> and work full-time in a sales role while pursuing my Master's degree in <strong>Computer Science and Data Analytics</strong>. I am focused on IT project management, business process analysis, and tech consultancy.</p>
             </section>
 
-            <!-- Hobbies removed from a card tile, placed above Favorites -->
+            <!-- Hobbies section converted to side-by-side tiles -->
             <section class="hobbies-section">
                 <h2>Hobbies & Interests</h2>
-                <ul class="hobby-list">
-                    <li>🎮 <strong>Gaming:</strong> Relaxing and competing online.</li>
-                    <li>🏋️ <strong>Gym:</strong> Staying active and disciplined.</li>
-                    <li>✈️ <strong>Travelling:</strong> Exploring new cultures and places.</li>
-                </ul>
+                <div class="hobby-tiles">
+                    <div class="hobby-tile"><h3>🎮 Gaming</h3></div>
+                    <div class="hobby-tile"><h3>🏋️ Gym</h3></div>
+                    <div class="hobby-tile"><h3>✈️ Travelling</h3></div>
+                </div>
             </section>
 
-            <!-- Favorites Card with attached image -->
+            <!-- Favorites Card with image path fixed to the root folder -->
             <section class="card favorites-card">
                 <h2>Favorites</h2>
                 <div class="favorites-content">
@@ -40,14 +40,14 @@
                         <p>📺 <strong>Favorite TV Show:</strong> <em>Game of Thrones</em></p>
                         <p>An epic fantasy series of power, family, and survival.</p>
                     </div>
-                    <!-- Using the exact attached image file -->
-                    <img src="images/image_359d26.jpg" alt="Game of Thrones scene" class="favorite-img">
+                    
+                    <img src="image_359d26.jpg" alt="Game of Thrones scene" class="favorite-img">
                 </div>
             </section>
 
             <section class="card contact-card">
                 <h2>Contact & Feedback</h2>
-                <p>Please leave your feedback below.</p>
+                <p>Please leave your feedback below. <em>(Note: This is a practice form for Week 4)</em></p>
                 
                 <form action="#" method="POST" class="contact-form">
                     <div class="form-group">
