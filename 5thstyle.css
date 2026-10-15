@@ -7,9 +7,9 @@
 }
 
 body {
-    background-color: #e2e8f0; /* Slightly darker, cooler background */
+    background-color: #e2e8f0; 
     font-family: Arial, Helvetica, sans-serif;
-    color: #334155; /* Deep slate gray */
+    color: #334155; 
     margin: 0;
     padding: 16px;
     line-height: 1.6;
@@ -23,19 +23,18 @@ body {
     padding: 20px;
     border: 1px solid #cbd5e1;
     border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-/* Typography */
 h1 {
-    color: #0f172a; /* Very deep slate */
+    color: #0f172a; 
     font-size: 1.75rem;
     text-align: center;
     margin-top: 0;
 }
 
 h2 {
-    color: #3b82f6; /* Modern, deeper blue accent */
+    color: #3b82f6; 
     font-size: 1.25rem;
     border-bottom: 2px solid #3b82f6;
     padding-bottom: 6px;
@@ -49,18 +48,23 @@ h2 {
     margin-bottom: 24px;
 }
 
-/* Mobile Layout: Single column stacked cards */
-.grid-layout {
+/* Mobile Layout: Single column stack */
+.page-layout {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
 }
 
 .card {
-    background-color: #f8fafc; /* Very light slate background for cards */
+    background-color: #f8fafc; 
     border: 1px solid #e2e8f0;
     border-radius: 6px;
     padding: 20px;
+}
+
+/* Hobbies is no longer a card, just needs simple padding */
+.hobbies-section {
+    padding: 0 10px;
 }
 
 .hobby-list {
@@ -72,14 +76,27 @@ h2 {
     margin-bottom: 10px;
 }
 
+/* Favorites Layout */
+.favorites-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .highlight-box {
-    background-color: #eff6ff; /* Light blue highlight */
+    background-color: #eff6ff; 
     padding: 12px;
     border-left: 4px solid #3b82f6;
     margin-top: 10px;
 }
 
-/* Links */
+.favorite-img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+}
+
 a {
     color: #2563eb;
     font-weight: bold;
@@ -102,6 +119,8 @@ a:hover {
 
 .contact-form {
     margin-top: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-group {
@@ -127,7 +146,6 @@ textarea {
     font-size: 1rem;
 }
 
-/* Highlight border when user clicks in the box */
 input:focus, select:focus, textarea:focus {
     outline: none;
     border-color: #3b82f6;
@@ -143,12 +161,11 @@ input:focus, select:focus, textarea:focus {
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    width: 100%;
     margin-top: 10px;
 }
 
 .submit-btn:hover {
-    background-color: #2563eb; /* Darker blue on hover */
+    background-color: #2563eb; 
 }
 
 #form-status {
@@ -157,7 +174,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* ==========================================================================
-   Desktop & Tablet Layout (>= 768px)
+   Desktop Layout (>= 768px) - Implementing CSS Grid
    ========================================================================== */
 
 @media (min-width: 768px) {
@@ -173,37 +190,26 @@ input:focus, select:focus, textarea:focus {
         font-size: 2.2rem;
     }
 
-    .grid-layout {
+    /* Put text on left, image on right for Game of Thrones section */
+    .favorites-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        align-items: center;
         gap: 24px;
     }
 
-    /* Spanning rules for CSS Grid */
-    .about-card {
+    /* Put Name and Email inputs side-by-side in the form */
+    .contact-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+    }
+
+    .full-width {
         grid-column: 1 / -1;
     }
-
-    .contact-card {
-        grid-column: 1 / -1; /* Make the form span the full width at the bottom */
-    }
-}
-
-/* ==========================================================================
-   Image & Media Styling
-   ========================================================================== */
-
-.favorite-img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-top: 12px;
-    border: 1px solid #cbd5e1;
-}
-
-.image-credit {
-    text-align: center;
-    margin-top: 8px;
-    margin-bottom: 0;
-    color: #64748b;
 }
