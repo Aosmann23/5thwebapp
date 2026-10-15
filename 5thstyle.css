@@ -62,18 +62,31 @@ h2 {
     padding: 20px;
 }
 
-/* Hobbies is no longer a card, just needs simple padding */
+/* New Hobby Tiles Layout */
 .hobbies-section {
-    padding: 0 10px;
+    padding: 0;
 }
 
-.hobby-list {
-    list-style-type: none;
-    padding-left: 0;
+.hobby-tiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 15px;
 }
 
-.hobby-list li {
-    margin-bottom: 10px;
+.hobby-tile {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 16px 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+}
+
+.hobby-tile h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #1e293b;
 }
 
 /* Favorites Layout */
@@ -190,7 +203,6 @@ input:focus, select:focus, textarea:focus {
         font-size: 2.2rem;
     }
 
-    /* Put text on left, image on right for Game of Thrones section */
     .favorites-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -198,7 +210,6 @@ input:focus, select:focus, textarea:focus {
         gap: 24px;
     }
 
-    /* Put Name and Email inputs side-by-side in the form */
     .contact-form {
         display: grid;
         grid-template-columns: 1fr 1fr;
