@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Development Portfolio</title>
+    <link rel="stylesheet" href="5thstyle.css">
+</head>
+<body>
+
+    <main class="container">
+        
+        <header class="portfolio-header">
+            <h1 title="Welcome to my homepage!">My Professional Portfolio</h1>
+            <p class="subtitle"><em>Hi, thanks for visiting! This is my enhanced web page created using Visual Studio Code and published live using GitHub Pages.</em></p>
+        </header>
+
+        <!-- Grid layout container for content sections -->
+        <div class="grid-layout">
+            
+            <!-- About Me Card -->
+            <section class="card about-card">
+                <h2>About Me</h2>
+                <p>I have an undergraduate degree in <strong>business</strong> and work full-time in a sales role while pursuing my Master's degree in <strong>Computer Science and Data Analytics</strong>. I am focused on IT project management, business process analysis, and tech consultancy.</p>
+            </section>
+
+            <!-- Hobbies & Interests Card -->
+            <section class="card hobbies-card">
+                <h2>Hobbies & Interests</h2>
+                <ul class="hobby-list">
+                    <li>🎮 <strong>Gaming:</strong> Relaxing and competing online.</li>
+                    <li>🏋️ <strong>Gym:</strong> Staying active and disciplined.</li>
+                    <li>✈️ <strong>Travelling:</strong> Exploring new cultures and places.</li>
+                </ul>
+            </section>
+
+            <!-- Favorites Card -->
+            <section class="card favorites-card">
+                <h2>Favorites</h2>
+                <div class="highlight-box">
+                    <p>📺 <strong>Favorite TV Show:</strong> <em>Game of Thrones</em></p>
+                </div>
+                <p>You can view the very first iteration of my web application <a href="#" target="_blank" rel="noopener noreferrer">here</a>.</p>
+            </section>
+
+            <!-- Contact & Feedback Form Card -->
+            <section class="card contact-card">
+                <h2>Contact & Feedback</h2>
+                <p>Please leave your feedback below. <em>(Note: This is a practice form for Week 4)</em></p>
+                
+                <form action="#" method="POST" class="contact-form">
+                    
+                    <div class="form-group">
+                        <label for="visitor-name">Name:</label>
+                        <input type="text" id="visitor-name" name="visitor_name" placeholder="e.g., Jane Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="visitor-email">Email Address:</label>
+                        <input type="email" id="visitor-email" name="visitor_email" placeholder="jane@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inquiry-type">Reason for Contact:</label>
+                        <select id="inquiry-type" name="inquiry_type">
+                            <option value="feedback">Website Feedback</option>
+                            <option value="networking">Professional Networking</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="visitor-message">Message:</label>
+                        <textarea id="visitor-message" name="visitor_message" rows="4" placeholder="Type your feedback here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Feedback</button>
+                    <!-- This paragraph is ready for our Javascript success message later -->
+                    <p id="form-status" aria-live="polite" role="status"></p>
+                </form>
+            </section>
+        </div>
+
+        <footer class="portfolio-footer">
+            <h2>Resources</h2>
+            <p>I am building my foundational coding skills using resources like <a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer" title="Visit W3Schools HTML Tutorial">W3Schools</a>.</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

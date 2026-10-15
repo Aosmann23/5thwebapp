@@ -1,0 +1,190 @@
+/* ==========================================================================
+   Base Styles & Mobile-First Layout (< 768px)
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e2e8f0; /* Slightly darker, cooler background */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #334155; /* Deep slate gray */
+    margin: 0;
+    padding: 16px;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Typography */
+h1 {
+    color: #0f172a; /* Very deep slate */
+    font-size: 1.75rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 {
+    color: #3b82f6; /* Modern, deeper blue accent */
+    font-size: 1.25rem;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 6px;
+    margin-top: 0;
+}
+
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+}
+
+/* Mobile Layout: Single column stacked cards */
+.grid-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f8fafc; /* Very light slate background for cards */
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.hobby-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.hobby-list li {
+    margin-bottom: 10px;
+}
+
+.highlight-box {
+    background-color: #eff6ff; /* Light blue highlight */
+    padding: 12px;
+    border-left: 4px solid #3b82f6;
+    margin-top: 10px;
+}
+
+/* Links */
+a {
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #1d4ed8;
+}
+
+.portfolio-footer {
+    margin-top: 24px;
+    border-top: 1px solid #cbd5e1;
+    padding-top: 16px;
+}
+
+/* ==========================================================================
+   Form Styling
+   ========================================================================== */
+
+.contact-form {
+    margin-top: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #1e293b;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+/* Highlight border when user clicks in the box */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.submit-btn {
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #2563eb; /* Darker blue on hover */
+}
+
+#form-status {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   Desktop & Tablet Layout (>= 768px)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+    body {
+        padding: 40px 20px;
+    }
+
+    .container {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .grid-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    /* Spanning rules for CSS Grid */
+    .about-card {
+        grid-column: 1 / -1;
+    }
+
+    .contact-card {
+        grid-column: 1 / -1; /* Make the form span the full width at the bottom */
+    }
+}
