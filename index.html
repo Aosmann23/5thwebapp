@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web Development Portfolio</title>
-    <link rel="stylesheet" href="5thstyle.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -34,13 +34,17 @@
                 </ul>
             </section>
 
-            <!-- Favorites Card -->
+            <!-- Favorites Card with Image -->
             <section class="card favorites-card">
                 <h2>Favorites</h2>
                 <div class="highlight-box">
                     <p>📺 <strong>Favorite TV Show:</strong> <em>Game of Thrones</em></p>
+                    
+                    <!-- Ensure you create an "images" folder and save your downloaded picture as "game-of-thrones.jpg" -->
+                    <img src="images/game-of-thrones.jpg" alt="Game of Thrones scene" class="favorite-img">
+                    
+                    <p class="image-credit"><small>Image gallery: <a href="https://wallpaperaccess.com/game-of-thrones" target="_blank" rel="noopener noreferrer">WallpaperAccess</a></small></p>
                 </div>
-                <p>You can view the very first iteration of my web application <a href="#" target="_blank" rel="noopener noreferrer">here</a>.</p>
             </section>
 
             <!-- Contact & Feedback Form Card -->
@@ -82,8 +86,9 @@
         </div>
 
         <footer class="portfolio-footer">
-            <h2>Resources</h2>
+            <h2>Resources & Past Work</h2>
             <p>I am building my foundational coding skills using resources like <a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer" title="Visit W3Schools HTML Tutorial">W3Schools</a>.</p>
+            <p><strong>Older Work:</strong> You can view the earlier iterations of my web application here: <a href="https://aosmann23.github.io/4thwebpage/" target="_blank" rel="noopener noreferrer">My Previous Web App</a>.</p>
         </footer>
 
     </main>
