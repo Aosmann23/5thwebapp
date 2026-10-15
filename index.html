@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web Development Portfolio</title>
-    <link rel="stylesheet" href="5thstyle.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -15,17 +15,15 @@
             <p class="subtitle"><em>Hi, thanks for visiting! This is my enhanced web page created using Visual Studio Code and published live using GitHub Pages.</em></p>
         </header>
 
-        <!-- Grid layout container for content sections -->
-        <div class="grid-layout">
+        <div class="page-layout">
             
-            <!-- About Me Card -->
             <section class="card about-card">
                 <h2>About Me</h2>
                 <p>I have an undergraduate degree in <strong>business</strong> and work full-time in a sales role while pursuing my Master's degree in <strong>Computer Science and Data Analytics</strong>. I am focused on IT project management, business process analysis, and tech consultancy.</p>
             </section>
 
-            <!-- Hobbies & Interests Card -->
-            <section class="card hobbies-card">
+            <!-- Hobbies removed from a card tile, placed above Favorites -->
+            <section class="hobbies-section">
                 <h2>Hobbies & Interests</h2>
                 <ul class="hobby-list">
                     <li>🎮 <strong>Gaming:</strong> Relaxing and competing online.</li>
@@ -34,26 +32,24 @@
                 </ul>
             </section>
 
-            <!-- Favorites Card with Image -->
+            <!-- Favorites Card with attached image -->
             <section class="card favorites-card">
                 <h2>Favorites</h2>
-                <div class="highlight-box">
-                    <p>📺 <strong>Favorite TV Show:</strong> <em>Game of Thrones</em></p>
-                    
-                    <!-- Ensure you create an "images" folder and save your downloaded picture as "game-of-thrones.jpg" -->
-                    <img src="images/game-of-thrones.jpg" alt="Game of Thrones scene" class="favorite-img">
-                    
-                    <p class="image-credit"><small>Image gallery: <a href="https://wallpaperaccess.com/game-of-thrones" target="_blank" rel="noopener noreferrer">WallpaperAccess</a></small></p>
+                <div class="favorites-content">
+                    <div class="highlight-box">
+                        <p>📺 <strong>Favorite TV Show:</strong> <em>Game of Thrones</em></p>
+                        <p>An epic fantasy series of power, family, and survival.</p>
+                    </div>
+                    <!-- Using the exact attached image file -->
+                    <img src="images/image_359d26.jpg" alt="Game of Thrones scene" class="favorite-img">
                 </div>
             </section>
 
-            <!-- Contact & Feedback Form Card -->
             <section class="card contact-card">
                 <h2>Contact & Feedback</h2>
                 <p>Please leave your feedback below. <em>(Note: This is a practice form for Week 4)</em></p>
                 
                 <form action="#" method="POST" class="contact-form">
-                    
                     <div class="form-group">
                         <label for="visitor-name">Name:</label>
                         <input type="text" id="visitor-name" name="visitor_name" placeholder="e.g., Jane Doe" required>
@@ -64,7 +60,7 @@
                         <input type="email" id="visitor-email" name="visitor_email" placeholder="jane@example.com" required>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group full-width">
                         <label for="inquiry-type">Reason for Contact:</label>
                         <select id="inquiry-type" name="inquiry_type">
                             <option value="feedback">Website Feedback</option>
@@ -73,14 +69,13 @@
                         </select>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group full-width">
                         <label for="visitor-message">Message:</label>
                         <textarea id="visitor-message" name="visitor_message" rows="4" placeholder="Type your feedback here..." required></textarea>
                     </div>
 
-                    <button type="submit" class="submit-btn">Send Feedback</button>
-                    <!-- This paragraph is ready for our Javascript success message later -->
-                    <p id="form-status" aria-live="polite" role="status"></p>
+                    <button type="submit" class="submit-btn full-width">Send Feedback</button>
+                    <p id="form-status" class="full-width" aria-live="polite" role="status"></p>
                 </form>
             </section>
         </div>
